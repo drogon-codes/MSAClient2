@@ -1,0 +1,3 @@
+#!/bin/sh
+mvn clean package && docker build -t deepk1820/MSAClient2 .
+docker rm -f MSAClient2 2>/dev/null || true && docker run -it --name MSAClient2 -p 8080:8080 -p 4848:4848 -p 8181:8181 --name MSAClient2 deepk1820/MSAClient2

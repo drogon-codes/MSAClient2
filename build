@@ -1,0 +1,3 @@
+#!/bin/sh
+mvn clean package
+docker build -t deepk1820/MSAClient2 .

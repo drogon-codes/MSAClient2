@@ -1,0 +1,21 @@
+#!/bin/sh
+#deploy="false"
+deploy="true"
+
+image=MSAClient2
+version=1.0-SNAPSHOT
+latest=true
+
+#OPTIONS="--no-cache --force-rm"
+#OPTIONS="--no-cache"
+#OPTIONS="--force-rm"
+OPTIONS=""
+
+docker build ${OPTIONS} -t deepk1820/${image}:1.0-SNAPSHOT .
+if [ "$?" -eq 0 ] && [ ${deploy} == "true" ]; then
+    docker push deepk1820/${image}:1.0-SNAPSHOT
+    if [ "$latest" == "true" ]; then
+        docker tag deepk1820/${image}:1.0-SNAPSHOT deepk1820/${image}:latest
+        docker push deepk1820/${image}:latest
+    fi
+fi

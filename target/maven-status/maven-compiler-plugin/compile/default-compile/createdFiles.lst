@@ -1,0 +1,11 @@
+clients\myclient.class
+com\mycompany\msaclient2\service\HealthCheckService.class
+entities\Customer.class
+com\mycompany\msaclient2\config\BootStrap.class
+entities\Category.class
+entities\Garments.class
+com\mycompany\msaclient2\service\ExampleService.class
+entities\TblOrder.class
+com\mycompany\msaclient2\config\Producers.class
+servlets\testServlet.class
+com\mycompany\msaclient2\config\CrossOriginResourceSharingFilter.class
